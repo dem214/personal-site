@@ -15,6 +15,30 @@
 </script>
 
 <form on:submit|preventDefault={handleSubmit}>
-	<lable>$</lable>
-	<input bind:value />
+	<div class="input-row">
+		<label for="command-input">$</label>
+		<input name="command-input" bind:value />
+</div>
 </form>
+
+<style>
+	.input-row {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+	}
+	input {
+		width: 100%;
+		background: transparent;
+		color: inherit;
+		font-family: inherit;
+		font-size: inherit;
+		border-color: transparent;
+	}
+	label {
+		text-align: right;
+		clear: both;
+		float:left;
+	}
+</style>
